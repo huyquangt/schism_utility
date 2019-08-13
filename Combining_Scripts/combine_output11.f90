@@ -13,7 +13,8 @@
 !
 
 !  ifort -cpp -O2 -assume byterecl -o combine_output11.WW ../UtilLib/argparse.f90 combine_output11.f90 ../UtilLib/schism_geometry.f90 -I$NETCDF/include -I$NETCDF_FORTRAN/include -L$NETCDF_FORTRAN/lib -L$NETCDF/lib -lnetcdf -lnetcdff
-
+!  If you wish to compile with gfortran please change: < ifort -cpp -O2 -assume byterecl >  by  <gfortran -cpp -O2 -ffree-line-length-none>
+!
 !  History: 
 !          2018-1      Richard Hofmeister changed the combine method (all vars read in at a
 !                      time) in order to speed up combine on many cores. This
